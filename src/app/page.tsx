@@ -240,6 +240,460 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* About Section */}
+      <section className="px-3 sm:px-6 py-8 sm:py-20 max-w-8xl mx-auto">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-center">
+          {/* Left Image */}
+          <div className="col-span-12 lg:col-span-6">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <img 
+                src="/pictures/about-pool.jpg" 
+                alt="Pool construction and maintenance services"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute bottom-6 left-6">
+                <div className="bg-white/90 backdrop-blur-sm rounded-lg px-4 py-2">
+                  <p className="text-sm text-gray-700 font-medium">Our schedule maintenance services.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Content */}
+          <div className="col-span-12 lg:col-span-6 space-y-6 sm:space-y-8">
+            {/* Small Welcome Text */}
+            <div className="text-sm uppercase tracking-[0.2em] text-gray-600 font-medium">
+              Welcome to Swim Design.
+            </div>
+            
+            {/* Main Heading */}
+            <div className="space-y-4">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light leading-[1.1] tracking-[-0.02em]">
+                <span className="text-gray-900">Simplify </span>
+                <span className="text-gray-400">Pool</span>
+              </h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light leading-[1.1] tracking-[-0.02em]">
+                <span className="text-gray-400">Maintenance </span>
+                <span className="text-gray-900">with Our</span>
+              </h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light leading-[1.1] tracking-[-0.02em]">
+                <span className="text-gray-900">Expert Services.</span>
+              </h2>
+            </div>
+            
+            {/* Paragraph */}
+            <div className="pt-4">
+              <p className="text-base sm:text-lg leading-relaxed text-gray-700 font-light max-w-lg">
+                Many health clubs, fitness centers and private clubs, such as the YMCA, 
+                have pools used mostly for exercise or recreation. Many towns and cities 
+                provide public pools. Many hotels have pools available for their guests to 
+                use at their leisure.
+              </p>
+            </div>
+            
+            {/* Service Points */}
+            <div className="space-y-3 pt-4">
+              <div className="flex items-center gap-3">
+                <div className="text-blue-600 font-bold text-lg">/</div>
+                <p className="text-gray-900 font-medium">Regular Cleaning and Skimming.</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="text-blue-600 font-bold text-lg">/</div>
+                <p className="text-gray-900 font-medium">Brushing and Vacuuming.</p>
+              </div>
+            </div>
+            
+            {/* CTA Button */}
+            <div className="pt-6">
+              <button 
+                onClick={() => window.location.href = '/gallery'}
+                className="group inline-flex items-center gap-3 bg-transparent border-2 border-gray-900 text-gray-900 px-6 py-3 rounded-full text-sm font-medium tracking-wide hover:bg-gray-900 hover:text-white transition-all duration-300"
+              >
+                <span>More About Us</span>
+                <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features/Statistics Strip Section - Swiss Design */}
+      <section className="mx-3 sm:mx-6 my-16 sm:my-24">
+        <div className="rounded-none sm:rounded-3xl px-8 sm:px-16 py-12 sm:py-20" style={{ backgroundColor: '#87CEEB' }}>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 sm:gap-20 max-w-6xl mx-auto">
+            
+            {/* Feature 1 - Experience */}
+            <div className="flex items-start gap-6">
+              {/* Icon */}
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center border border-gray-200 flex-shrink-0">
+                <img src="/pictures/ribbon.png" alt="Achievement ribbon" className="w-10 h-10 object-contain" />
+              </div>
+              
+              {/* Typography */}
+              <div className="space-y-3 flex-1">
+                <div className="space-y-1">
+                  <h3 className="text-lg font-bold text-gray-900 uppercase tracking-[0.1em] leading-tight">
+                    25 Years of Experience
+                  </h3>
+                </div>
+                <p className="text-sm text-gray-700 leading-relaxed max-w-xs italic">
+                  For over 25 years we have been offering only the best products and services.
+                </p>
+              </div>
+            </div>
+
+            {/* Feature 2 - Quality Products */}
+            <div className="flex items-start gap-6">
+              {/* Icon */}
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center border border-gray-200 flex-shrink-0">
+                <img src="/pictures/ribbon.png" alt="Achievement ribbon" className="w-10 h-10 object-contain" />
+              </div>
+              
+              {/* Typography */}
+              <div className="space-y-3 flex-1">
+                <div className="space-y-1">
+                  <h3 className="text-lg font-bold text-gray-900 uppercase tracking-[0.1em] leading-tight">
+                    Quality Products<br />Delivered by Us
+                  </h3>
+                </div>
+                <p className="text-sm text-gray-700 leading-relaxed max-w-xs italic">
+                  Your satisfaction is our priority. If you're not completely happy with our service, we'll work.
+                </p>
+              </div>
+            </div>
+
+            {/* Feature 3 - Support */}
+            <div className="flex items-start gap-6">
+              {/* Icon */}
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center border border-gray-200 flex-shrink-0">
+                <img src="/pictures/ribbon.png" alt="Achievement ribbon" className="w-10 h-10 object-contain" />
+              </div>
+              
+              {/* Typography */}
+              <div className="space-y-3 flex-1">
+                <div className="space-y-1">
+                  <h3 className="text-lg font-bold text-gray-900 uppercase tracking-[0.1em] leading-tight">
+                    24/7 Hours<br />Client Support
+                  </h3>
+                </div>
+                <p className="text-sm text-gray-700 leading-relaxed max-w-xs italic">
+                  We offer flexible service plans that can be tailored to your specific preferences and pool.
+                </p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      {/* Categories of Specialization Section */}
+      <section className="px-3 sm:px-6 py-12 sm:py-20 max-w-8xl mx-auto">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-start">
+          
+          {/* Left Content */}
+          <div className="col-span-12 lg:col-span-5 space-y-6 sm:space-y-8">
+            {/* Main Heading */}
+            <div className="space-y-2">
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-[-0.02em]">
+                <span className="text-gray-900">Our<br />categories of<br /></span>
+                <span className="text-gray-400">Specialization.</span>
+              </h2>
+            </div>
+            
+            {/* Description Paragraph */}
+            <div className="pt-2 sm:pt-4">
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed max-w-sm font-light">
+                Each pool is different. We can customize your service to fit your location's needs. We can also offer services that are completely unique to your area!
+              </p>
+            </div>
+          </div>
+
+          {/* Right Content - Service Cards */}
+          <div className="col-span-12 lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+            
+            {/* Residential Pool Services */}
+            <div className="relative group">
+              <div className="relative aspect-[16/10] overflow-hidden rounded-2xl">
+                <img 
+                  src="/pictures/section-pool1.png" 
+                  alt="Residential Pool Services"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300"></div>
+              </div>
+              
+              {/* Title */}
+              <div className="mt-4">
+                <h3 className="text-xl sm:text-2xl font-medium text-gray-900">
+                  Residential Pool Services
+                </h3>
+              </div>
+            </div>
+
+            {/* Commercial Pool Services */}
+            <div className="relative group">
+              <div className="relative aspect-[16/10] overflow-hidden rounded-2xl">
+                <img 
+                  src="/pictures/section-pool2.png" 
+                  alt="Commercial Pool Services"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300"></div>
+              </div>
+              
+              {/* Title */}
+              <div className="mt-4">
+                <h3 className="text-xl sm:text-2xl font-medium text-gray-900">
+                  Commercial Pool Services
+                </h3>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Our Services Section - Swiss Design */}
+      <section className="px-3 sm:px-6 py-12 sm:py-20 max-w-8xl mx-auto">
+        {/* Header */}
+        <div className="mb-16 sm:mb-20">
+          <div className="text-xs uppercase tracking-[0.2em] text-gray-600 font-medium mb-6">
+            What we offer.
+          </div>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light leading-[1.1] tracking-[-0.02em] text-gray-900">
+            Our Services
+          </h2>
+        </div>
+
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
+          
+          {/* Building New Pool */}
+          <div className="group">
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/20 hover:bg-white/95 transition-all duration-300">
+              <div className="space-y-6">
+                {/* Content */}
+                <div className="space-y-4">
+                  <div className="space-y-2">
+                    <div className="text-xs uppercase tracking-[0.15em] text-gray-500 font-medium">01</div>
+                    <h3 className="text-xl sm:text-2xl font-light text-gray-900 leading-tight">
+                      Building New Pool
+                    </h3>
+                  </div>
+                  
+                  <p className="text-sm text-gray-600 leading-relaxed font-light max-w-xs">
+                    Custom pool construction with modern designs and premium materials for your dream pool.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Pool Repair */}
+          <div className="group">
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/20 hover:bg-white/95 transition-all duration-300">
+              <div className="space-y-6">
+                {/* Content */}
+                <div className="space-y-4">
+                  <div className="space-y-2">
+                    <div className="text-xs uppercase tracking-[0.15em] text-gray-500 font-medium">02</div>
+                    <h3 className="text-xl sm:text-2xl font-light text-gray-900 leading-tight">
+                      Pool Repair
+                    </h3>
+                  </div>
+                  
+                  <p className="text-sm text-gray-600 leading-relaxed font-light max-w-xs">
+                    Expert repair services to fix leaks, cracks, and equipment issues quickly and efficiently.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Pool Maintenance */}
+          <div className="group">
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/20 hover:bg-white/95 transition-all duration-300">
+              <div className="space-y-6">
+                {/* Content */}
+                <div className="space-y-4">
+                  <div className="space-y-2">
+                    <div className="text-xs uppercase tracking-[0.15em] text-gray-500 font-medium">03</div>
+                    <h3 className="text-xl sm:text-2xl font-light text-gray-900 leading-tight">
+                      Pool Maintenance
+                    </h3>
+                  </div>
+                  
+                  <p className="text-sm text-gray-600 leading-relaxed font-light max-w-xs">
+                    Regular cleaning, chemical balancing, and upkeep to keep your pool pristine year-round.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Equipment Installation */}
+          <div className="group">
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/20 hover:bg-white/95 transition-all duration-300">
+              <div className="space-y-6">
+                {/* Content */}
+                <div className="space-y-4">
+                  <div className="space-y-2">
+                    <div className="text-xs uppercase tracking-[0.15em] text-gray-500 font-medium">04</div>
+                    <h3 className="text-xl sm:text-2xl font-light text-gray-900 leading-tight">
+                      Equipment Installation
+                    </h3>
+                  </div>
+                  
+                  <p className="text-sm text-gray-600 leading-relaxed font-light max-w-xs">
+                    Professional installation of pumps, filters, heaters, and automation systems for optimal performance.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* Our Products Section */}
+      <section className="px-3 sm:px-6 py-12 sm:py-20 max-w-8xl mx-auto">
+        {/* Header */}
+        <div className="mb-16 sm:mb-20">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light leading-[1.1] tracking-[-0.02em] text-gray-900">
+            Our Products
+          </h2>
+        </div>
+
+        {/* Products Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          
+          {/* Product 1 - Cleaning Accessories */}
+          <div className="group">
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 hover:bg-white/95 transition-all duration-300">
+              {/* Product Image */}
+              <div className="aspect-square p-8 bg-gradient-to-br from-gray-50 to-gray-100">
+                <img 
+                  src="/pictures/product1.png" 
+                  alt="Cleaning Accessories"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              
+              {/* Product Label */}
+              <div className="p-6">
+                <div className="mb-4">
+                  <div className="text-xs uppercase tracking-[0.15em] text-gray-500 font-medium mb-2">01</div>
+                  <h3 className="text-lg font-light text-gray-900">Cleaning Accessories</h3>
+                </div>
+                
+                {/* CTA Button */}
+                <button 
+                  onClick={() => window.location.href = '/products'}
+                  className="w-full bg-gray-900 text-white py-3 text-sm font-medium hover:bg-gray-800 transition-colors duration-200 uppercase tracking-[0.1em]"
+                >
+                  See More
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Product 2 - Swimming Pool Chemicals */}
+          <div className="group">
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 hover:bg-white/95 transition-all duration-300">
+              {/* Product Image */}
+              <div className="aspect-square p-8 bg-gradient-to-br from-gray-50 to-gray-100">
+                <img 
+                  src="/pictures/product2.png" 
+                  alt="Swimming Pool Chemicals"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              
+              {/* Product Label */}
+              <div className="p-6">
+                <div className="mb-4">
+                  <div className="text-xs uppercase tracking-[0.15em] text-gray-500 font-medium mb-2">02</div>
+                  <h3 className="text-lg font-light text-gray-900">Swimming Pool Chemicals</h3>
+                </div>
+                
+                {/* CTA Button */}
+                <button 
+                  onClick={() => window.location.href = '/products'}
+                  className="w-full bg-gray-900 text-white py-3 text-sm font-medium hover:bg-gray-800 transition-colors duration-200 uppercase tracking-[0.1em]"
+                >
+                  See More
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Product 3 - Water Proofing Materials */}
+          <div className="group">
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 hover:bg-white/95 transition-all duration-300">
+              {/* Product Image */}
+              <div className="aspect-square p-8 bg-gradient-to-br from-gray-50 to-gray-100">
+                <img 
+                  src="/pictures/product3.png" 
+                  alt="Water Proofing Materials"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              
+              {/* Product Label */}
+              <div className="p-6">
+                <div className="mb-4">
+                  <div className="text-xs uppercase tracking-[0.15em] text-gray-500 font-medium mb-2">03</div>
+                  <h3 className="text-lg font-light text-gray-900">Water Proofing Materials</h3>
+                </div>
+                
+                {/* CTA Button */}
+                <button 
+                  onClick={() => window.location.href = '/products'}
+                  className="w-full bg-gray-900 text-white py-3 text-sm font-medium hover:bg-gray-800 transition-colors duration-200 uppercase tracking-[0.1em]"
+                >
+                  See More
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Product 4 - Others */}
+          <div className="group">
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 hover:bg-white/95 transition-all duration-300">
+              {/* Product Image */}
+              <div className="aspect-square p-8 bg-gradient-to-br from-gray-50 to-gray-100">
+                <img 
+                  src="/pictures/product4.png" 
+                  alt="Others"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              
+              {/* Product Label */}
+              <div className="p-6">
+                <div className="mb-4">
+                  <div className="text-xs uppercase tracking-[0.15em] text-gray-500 font-medium mb-2">04</div>
+                  <h3 className="text-lg font-light text-gray-900">Others</h3>
+                </div>
+                
+                {/* CTA Button */}
+                <button 
+                  onClick={() => window.location.href = '/products'}
+                  className="w-full bg-gray-900 text-white py-3 text-sm font-medium hover:bg-gray-800 transition-colors duration-200 uppercase tracking-[0.1em]"
+                >
+                  See More
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
     </div>
   )
 }
