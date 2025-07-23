@@ -75,8 +75,7 @@ export default function Home() {
                   { name: 'About', href: '#about' },
                   { name: 'Projects', href: '#projects' },
                   { name: 'Products', href: '#products' },
-                  { name: 'Gallery', href: '#gallery' },
-                  { name: 'Contact', href: '#contact' }
+                  { name: 'Gallery', href: '#gallery' }
                 ].map((item, index) => (
                   <li key={item.name}>
                     <a
@@ -360,7 +359,7 @@ export default function Home() {
                   </h3>
                 </div>
                 <p className="text-sm text-gray-700 leading-relaxed max-w-xs italic">
-                  Your satisfaction is our priority. If you're not completely happy with our service, we'll work.
+                  Your satisfaction is our priority. If you&apos;re not completely happy with our service, we&apos;ll work.
                 </p>
               </div>
             </div>
@@ -406,7 +405,7 @@ export default function Home() {
             {/* Description Paragraph */}
             <div className="pt-2 sm:pt-4">
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed max-w-sm font-light">
-                Each pool is different. We can customize your service to fit your location's needs. We can also offer services that are completely unique to your area!
+                Each pool is different. We can customize your service to fit your location&apos;s needs. We can also offer services that are completely unique to your area!
               </p>
             </div>
           </div>
@@ -692,6 +691,109 @@ export default function Home() {
             </div>
           </div>
 
+        </div>
+      </section>
+
+      {/* Gallery Section - Swiss Design */}
+      <section className="px-3 sm:px-6 py-12 sm:py-20 max-w-8xl mx-auto">
+        {/* Header */}
+        <div className="mb-16 sm:mb-20">
+          <div className="text-xs uppercase tracking-[0.2em] text-gray-600 font-medium mb-6">
+            Our work.
+          </div>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light leading-[1.1] tracking-[-0.02em] text-gray-900">
+            Gallery
+          </h2>
+        </div>
+
+        {/* Gallery Grid - 3 columns, 2 rows */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
+          
+          {/* Image 1 */}
+          <div className="group">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <img 
+                src="/pictures/1.jpg" 
+                alt="Swimming pool project showcase"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+            </div>
+          </div>
+
+          {/* Image 2 */}
+          <div className="group">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <img 
+                src="/pictures/2.jpg" 
+                alt="Swimming pool project showcase"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+            </div>
+          </div>
+
+          {/* Image 3 */}
+          <div className="group">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <img 
+                src="/pictures/3.jpg" 
+                alt="Swimming pool project showcase"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+            </div>
+          </div>
+
+          {/* Image 4 */}
+          <div className="group">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <img 
+                src="/pictures/4.jpg" 
+                alt="Swimming pool project showcase"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+            </div>
+          </div>
+
+          {/* Image 5 */}
+          <div className="group">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <img 
+                src="/pictures/5.jpeg" 
+                alt="Swimming pool project showcase"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+            </div>
+          </div>
+
+          {/* Image 6 */}
+          <div className="group">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <img 
+                src="/pictures/6.jpeg" 
+                alt="Swimming pool project showcase"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+            </div>
+          </div>
+
+        </div>
+
+        {/* CTA Button */}
+        <div className="flex justify-center">
+          <button 
+            onClick={() => window.location.href = '/gallery'}
+            className="group inline-flex items-center gap-3 bg-gray-900 text-white px-8 py-4 text-sm font-medium hover:bg-gray-800 transition-colors duration-200 uppercase tracking-[0.1em]"
+          >
+            <span>View More</span>
+            <svg className="w-4 h-4 group-hover:translate-x-0.5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </button>
         </div>
       </section>
     </div>
