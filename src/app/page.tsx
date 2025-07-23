@@ -796,6 +796,92 @@ export default function Home() {
           </button>
         </div>
       </section>
+
+      {/* Contact Us Section - Swiss Design */}
+      <section className="mx-3 sm:mx-6 my-12 sm:my-20">
+        <div className="bg-white rounded-none sm:rounded-3xl px-8 sm:px-16 py-12 sm:py-20">
+          <div className="max-w-8xl mx-auto">
+            {/* Header */}
+            <div className="mb-16 sm:mb-20">
+              <div className="text-xs uppercase tracking-[0.2em] text-gray-600 font-medium mb-6">
+                Get in touch.
+              </div>
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light leading-[1.1] tracking-[-0.02em] text-gray-900">
+                Contact Us
+              </h2>
+            </div>
+
+            {/* Contact Content */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-20">
+              
+              {/* Left Content */}
+              <div className="space-y-8 sm:space-y-12">
+                {/* Contact Info */}
+                <div className="space-y-6">
+                  <div>
+                    <div className="text-xs uppercase tracking-[0.15em] text-gray-500 font-medium mb-2">Phone</div>
+                    <p className="text-xl sm:text-2xl font-light text-gray-900">(+91) 9176203070</p>
+                  </div>
+                  
+                  <div>
+                    <div className="text-xs uppercase tracking-[0.15em] text-gray-500 font-medium mb-2">Email</div>
+                    <p className="text-xl sm:text-2xl font-light text-gray-900">venienter@gmail.com</p>
+                  </div>
+                </div>
+
+                {/* Mail Button */}
+                <div className="pt-4">
+                  <a 
+                    href="mailto:venienter@gmail.com"
+                    className="group inline-flex items-center gap-3 bg-gray-900 text-white px-8 py-4 text-sm font-medium hover:bg-gray-800 transition-colors duration-200 uppercase tracking-[0.1em]"
+                  >
+                    <span>Send Email</span>
+                    <svg className="w-4 h-4 group-hover:translate-x-0.5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              {/* Right Content */}
+              <div className="space-y-6">
+                <div className="text-lg sm:text-xl font-light text-gray-700 leading-relaxed">
+                  Ready to transform your pool experience? Get in touch with our team of experts today.
+                </div>
+                
+                <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
+                  <p>We&apos;re here to help with all your swimming pool needs, from maintenance to complete installations.</p>
+                  <p>Our experienced team is available 24/7 to provide you with the best service and support.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="mt-20 sm:mt-32">
+        <div className="mx-3 sm:mx-6 mb-3 sm:mb-6">
+          <div className="rounded-none sm:rounded-3xl bg-gray-900 px-8 sm:px-16 py-12 sm:py-16">
+            <div className="max-w-6xl mx-auto text-center">
+              
+              {/* Main Footer Text */}
+              <div className="mb-8 sm:mb-12">
+                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-light text-white tracking-[0.1em] uppercase">
+                  Swim Designers
+                </h3>
+              </div>
+
+              {/* Copyright */}
+              <div className="pt-8 sm:pt-12 border-t border-gray-800">
+                <p className="text-sm text-gray-400 font-light tracking-wide">
+                  © 2025 Veni Enterprises. All rights reserved.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }
