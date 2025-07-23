@@ -24,9 +24,12 @@ export default function Home() {
             </div>
             
             {/* Request Service Button */}
-            <button className="hidden sm:block bg-gray-900 text-white px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm font-medium tracking-wide hover:bg-gray-800 transition-colors duration-200 rounded-lg">
+            <a 
+              href="mailto:venienter@gmail.com"
+              className="hidden sm:block bg-gray-900 text-white px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm font-medium tracking-wide hover:bg-gray-800 transition-colors duration-200 rounded-lg"
+            >
               Request Service
-            </button>
+            </a>
             
             {/* Hamburger Menu */}
             <button 
@@ -73,14 +76,21 @@ export default function Home() {
               <ul className="space-y-6 sm:space-y-8">
                 {[
                   { name: 'About', href: '#about' },
-                  { name: 'Projects', href: '#projects' },
+                  { name: 'Services', href: '#projects' },
                   { name: 'Products', href: '#products' },
                   { name: 'Gallery', href: '#gallery' }
                 ].map((item, index) => (
                   <li key={item.name}>
                     <a
                       href={item.href}
-                      onClick={() => setIsMenuOpen(false)}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setIsMenuOpen(false);
+                        const element = document.querySelector(item.href);
+                        if (element) {
+                          element.scrollIntoView({ behavior: 'smooth' });
+                        }
+                      }}
                       className={`block text-xl sm:text-2xl font-light text-gray-900 hover:text-gray-600 transition-colors duration-200 transform hover:translate-x-2 py-2 touch-manipulation ${isMenuOpen ? 'animate-slideInRight' : ''}`}
                       style={{ animationDelay: `${index * 100}ms` }}
                     >
@@ -98,12 +108,13 @@ export default function Home() {
                   <div className="text-xs uppercase tracking-wider text-gray-500 font-medium">Contact</div>
                   <div className="text-sm font-semibold text-gray-900">(+91) 9176203070</div>
                 </div>
-                <button 
+                <a 
+                  href="mailto:venienter@gmail.com"
                   onClick={() => setIsMenuOpen(false)}
-                  className="w-full bg-gray-900 text-white py-3 text-sm font-medium tracking-wide hover:bg-gray-800 transition-colors duration-200 rounded-lg touch-manipulation"
+                  className="block w-full bg-gray-900 text-white py-3 text-sm font-medium tracking-wide hover:bg-gray-800 transition-colors duration-200 rounded-lg touch-manipulation text-center"
                 >
                   Request Service
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -241,7 +252,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="px-3 sm:px-6 py-8 sm:py-20 max-w-8xl mx-auto">
+      <section id="about" className="px-3 sm:px-6 py-8 sm:py-20 max-w-8xl mx-auto">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-center">
           {/* Left Image */}
           <div className="col-span-12 lg:col-span-6">
@@ -458,7 +469,7 @@ export default function Home() {
       </section>
 
       {/* Our Services Section - Swiss Design */}
-      <section className="px-3 sm:px-6 py-12 sm:py-20 max-w-8xl mx-auto">
+      <section id="projects" className="px-3 sm:px-6 py-12 sm:py-20 max-w-8xl mx-auto">
         {/* Header */}
         <div className="mb-16 sm:mb-20">
           <div className="text-xs uppercase tracking-[0.2em] text-gray-600 font-medium mb-6">
@@ -560,7 +571,7 @@ export default function Home() {
       </section>
 
       {/* Our Products Section */}
-      <section className="px-3 sm:px-6 py-12 sm:py-20 max-w-8xl mx-auto">
+      <section id="products" className="px-3 sm:px-6 py-12 sm:py-20 max-w-8xl mx-auto">
         {/* Header */}
         <div className="mb-16 sm:mb-20">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light leading-[1.1] tracking-[-0.02em] text-gray-900">
@@ -695,7 +706,7 @@ export default function Home() {
       </section>
 
       {/* Gallery Section - Swiss Design */}
-      <section className="px-3 sm:px-6 py-12 sm:py-20 max-w-8xl mx-auto">
+      <section id="gallery" className="px-3 sm:px-6 py-12 sm:py-20 max-w-8xl mx-auto">
         {/* Header */}
         <div className="mb-16 sm:mb-20">
           <div className="text-xs uppercase tracking-[0.2em] text-gray-600 font-medium mb-6">
@@ -863,17 +874,75 @@ export default function Home() {
       <footer className="mt-20 sm:mt-32">
         <div className="mx-3 sm:mx-6 mb-3 sm:mb-6">
           <div className="rounded-none sm:rounded-3xl bg-gray-900 px-8 sm:px-16 py-12 sm:py-16">
-            <div className="max-w-6xl mx-auto text-center">
+            <div className="max-w-6xl mx-auto">
               
               {/* Main Footer Text */}
-              <div className="mb-8 sm:mb-12">
+              <div className="mb-8 sm:mb-12 text-center">
                 <h3 className="text-2xl sm:text-3xl lg:text-4xl font-light text-white tracking-[0.1em] uppercase">
                   Swim Designers
                 </h3>
               </div>
 
+              {/* Footer Content - Social Icons and Quick Links */}
+              <div className="flex flex-col sm:flex-row justify-between items-start gap-8 sm:gap-12 mb-8 sm:mb-12">
+                
+                {/* Left Side - Social Icons */}
+                <div className="space-y-4">
+                  <div className="text-xs uppercase tracking-wider text-gray-400 font-medium">Connect With Us</div>
+                  <div className="flex gap-4">
+                    {/* Email Icon */}
+                    <a 
+                      href="mailto:venienter@gmail.com"
+                      className="w-12 h-12 bg-gray-800 hover:bg-white rounded-full flex items-center justify-center transition-colors duration-200 group"
+                    >
+                      <svg className="w-6 h-6 text-gray-400 group-hover:text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                      </svg>
+                    </a>
+                    
+                    {/* Phone Icon */}
+                    <a 
+                      href="tel:+919176203070"
+                      className="w-12 h-12 bg-gray-800 hover:bg-white rounded-full flex items-center justify-center transition-colors duration-200 group"
+                    >
+                      <svg className="w-6 h-6 text-gray-400 group-hover:text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+
+                {/* Right Side - Quick Links */}
+                <div className="space-y-4">
+                  <div className="text-xs uppercase tracking-wider text-gray-400 font-medium">Quick Links</div>
+                  <div className="grid grid-cols-2 gap-x-8 gap-y-2">
+                    {[
+                      { name: 'About', href: '#about' },
+                      { name: 'Services', href: '#projects' },
+                      { name: 'Products', href: '#products' },
+                      { name: 'Gallery', href: '#gallery' }
+                    ].map((item) => (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          const element = document.querySelector(item.href);
+                          if (element) {
+                            element.scrollIntoView({ behavior: 'smooth' });
+                          }
+                        }}
+                        className="block text-sm text-gray-400 hover:text-white transition-colors duration-200"
+                      >
+                        {item.name}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
               {/* Copyright */}
-              <div className="pt-8 sm:pt-12 border-t border-gray-800">
+              <div className="pt-8 sm:pt-12 border-t border-gray-800 text-center">
                 <p className="text-sm text-gray-400 font-light tracking-wide">
                   © 2025 Veni Enterprises. All rights reserved.
                 </p>
